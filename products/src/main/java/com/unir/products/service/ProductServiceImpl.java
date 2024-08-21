@@ -34,9 +34,9 @@ public class ProductServiceImpl implements ProductsService
 	{
 		if(request != null && StringUtils.hasLength(request.getName().trim())
 				&& StringUtils.hasLength(request.getDescription().trim())
-				&& StringUtils.hasLength(request.getCountry().trim()) && request.isVisible())
+				&& StringUtils.hasLength(request.getPrecio().trim()) && request.isVisible())
 				{
-					Product product = Product.builder().name(request.getName()).description(request.getDescription()).country(request.getCountry()).visible(request.isVisible()).build();
+					Product product = Product.builder().name(request.getName()).description(request.getDescription()).precio(request.getPrecio()).imagen(request.getImagen()).visible(request.isVisible()).build();
 					return repository.save(product);
 				}
 		else

@@ -30,11 +30,14 @@ public class Product
 	@Column(name = "name", unique = true)
 	private String name;
 	
-	@Column(name = "country")
-	private String country;
+	@Column(name = "precio")
+	private String precio;
 	
 	@Column(name = "description")
 	private String description;
+	
+	@Column(name = "imagen")
+	private String imagen;
 	
 	@Column(name = "visible")
 	private Boolean visible;
