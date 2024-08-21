@@ -1,0 +1,8 @@
+com\unir\products\controller\ProductsController.class
+com\unir\products\data\ProductRepository.class
+com\unir\products\model\pojo\Product$ProductBuilder.class
+com\unir\products\model\request\CreateProductRequest.class
+com\unir\products\ProductsApplication.class
+com\unir\products\service\ProductServiceImpl.class
+com\unir\products\model\pojo\Product.class
+com\unir\products\service\ProductsService.class
