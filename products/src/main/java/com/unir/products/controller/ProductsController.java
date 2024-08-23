@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.unir.products.model.pojo.Product;
 import com.unir.products.model.request.CreateProductRequest;
@@ -25,6 +26,7 @@ public class ProductsController
 	
 	private final ProductsService service;
 	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/products")
 	public ResponseEntity<List<Product>> getProducts()
 	{
@@ -40,6 +42,7 @@ public class ProductsController
 		}
 	}
 	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/products/{productId}")
 	public ResponseEntity<Product> getProduct(@PathVariable String productId) 
 	{
@@ -55,6 +58,7 @@ public class ProductsController
 		}
 	}
 	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@DeleteMapping("/products/{productId}")
 	public ResponseEntity<Void> deleteProduct(@PathVariable String productId)
 	{
@@ -70,6 +74,7 @@ public class ProductsController
 		}
 	}
 	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/products")
 	public ResponseEntity<Product> getProduct(@RequestBody CreateProductRequest request)
 	{
